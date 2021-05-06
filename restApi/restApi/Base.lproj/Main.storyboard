@@ -27,15 +27,43 @@
                                     <action selector="getUsuarioAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCK-xW-wFA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np2-l5-SXJ">
+                                <rect key="frame" x="20" y="152" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-n0-iqF">
+                                <rect key="frame" x="20" y="205" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="g5G-Sd-gVA">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Np2-l5-SXJ" firstAttribute="top" secondItem="G9O-2n-EaR" secondAttribute="bottom" constant="32" id="6Xh-LT-Wim"/>
+                            <constraint firstItem="hgG-n0-iqF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lvj-Cd-oPC"/>
                             <constraint firstItem="G9O-2n-EaR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="TX0-Oy-OJP"/>
+                            <constraint firstItem="Np2-l5-SXJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eET-XM-aCK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G9O-2n-EaR" secondAttribute="trailing" constant="20" id="eFd-BW-Nsh"/>
                             <constraint firstItem="G9O-2n-EaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ouF-9L-jhP"/>
+                            <constraint firstItem="g5G-Sd-gVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="poc-XL-Iwd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hgG-n0-iqF" secondAttribute="trailing" constant="20" id="rAK-E7-7jh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Np2-l5-SXJ" secondAttribute="trailing" constant="20" id="v3q-YW-M9W"/>
+                            <constraint firstItem="g5G-Sd-gVA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xwN-sS-0Ea"/>
+                            <constraint firstItem="hgG-n0-iqF" firstAttribute="top" secondItem="Np2-l5-SXJ" secondAttribute="bottom" constant="32" id="yuD-KS-41W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="g5G-Sd-gVA" id="yor-Bo-NrV"/>
+                        <outlet property="txtEmail" destination="hgG-n0-iqF" id="vRP-ol-Doz"/>
+                        <outlet property="txtUsuario" destination="Np2-l5-SXJ" id="iMg-jy-ojk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

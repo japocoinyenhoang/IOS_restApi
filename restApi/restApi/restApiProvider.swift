@@ -21,17 +21,23 @@ final class restApiProvider {
     
     //añado las peticiones
     //GET de un usuario
-    func getUsuario(id: Int)  {
+    // el _ es para pasarle el dato de forma oculta
+    func getUsuario(id: Int, success: @escaping (_ usuario: Usuario) ->(), faillure: @escaping (_ error: Error?) ->()) {
+        
         // preparacion de la url para coger el usuario
         let url = "\(baseURL)users/\(id)"
+        
         //AF hace referencia a la libreria Alamofire
         //llamada basica get, y que la llamada devuelva un valor (codigo del 200 al 299 que he sacado como constante estadoOK
         AF.request(url, method: .get).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) {
             response in
             //comprobar si el usuario existe
             if let usuario = response.value?.data {
+                success(usuario)
                 // si tenemos datos del usuario
-                print(usuario)
+                /*print(usuario)
+                print(usuario.nombre!)
+                print(usuario.email!)*/
             }else {
                 // no tenemos datos del usuario
                 print("usuario no encontrado")
