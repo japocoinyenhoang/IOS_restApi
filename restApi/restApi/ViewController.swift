@@ -41,7 +41,6 @@ class ViewController: UIViewController {
         } failure: { (error) -> () in
             // Si la peticion no es correcta
             self.ActivityIndicator.stopAnimating()
-            print(error.debugDescription)
         }
 
     }
