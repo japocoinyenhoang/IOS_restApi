@@ -34,12 +34,22 @@ struct usuarioRespuesta: Decodable {
 struct Usuario: Decodable {
 
     let id: Int?
-    let name: String?
+    let nombre: String?
     let email: String?
-    let gender: String?
-    let status: String?
-    let created_at: Date?
-    let updated_at: Date?
+    let sexo: String?
+    let estado: String?
+    let fechaCreacion: Date?
+    let fechaModificada: Date?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case nombre = "name"
+        case email
+        case sexo = "gender"
+        case estado = "status"
+        case fechaCreacion = "created_at"
+        case fechaModificada = "updated_at"
+    }
 }
 struct META: Decodable {
     //null
