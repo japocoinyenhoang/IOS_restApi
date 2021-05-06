@@ -28,16 +28,19 @@ import Foundation
 
 struct usuarioRespuesta: Decodable {
     let code: Int?
-    //let meta: Meta?
+    let meta: META?
     let data: Usuario?
 }
 struct Usuario: Decodable {
 
-    let id: Int
-    let name: String
-    let email: String
-    let gender: String
-    let status: String
-    let created_at: String
-    let updated_at: String
+    let id: Int?
+    let name: String?
+    let email: String?
+    let gender: String?
+    let status: String?
+    let created_at: Date?
+    let updated_at: Date?
+}
+struct META: Decodable {
+    //null
 }

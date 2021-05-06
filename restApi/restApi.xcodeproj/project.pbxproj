@@ -19,6 +19,7 @@
 		B290A3AA2644312100ABECDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B290A3A92644312100ABECDC /* Alamofire */; };
 		B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3AE264431D100ABECDC /* restApiProvider.swift */; };
 		B290A3B62644392F00ABECDC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3B52644392F00ABECDC /* Usuario.swift */; };
+		B290A3BC2644440700ABECDC /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3BB2644440700ABECDC /* DateDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B290A39926442F7400ABECDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B290A3AE264431D100ABECDC /* restApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApiProvider.swift; sourceTree = "<group>"; };
 		B290A3B52644392F00ABECDC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		B290A3BB2644440700ABECDC /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		B290A3B3264438F800ABECDC /* api */ = {
 			isa = PBXGroup;
 			children = (
+				B290A3BA264443C100ABECDC /* Decoder */,
 				B290A3B42644390D00ABECDC /* Data */,
 			);
 			path = api;
@@ -153,6 +156,14 @@
 				B290A3B52644392F00ABECDC /* Usuario.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B290A3BA264443C100ABECDC /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				B290A3BB2644440700ABECDC /* DateDecoder.swift */,
+			);
+			path = Decoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B290A3BC2644440700ABECDC /* DateDecoder.swift in Sources */,
 				B290A37D26442F7300ABECDC /* restApi.xcdatamodeld in Sources */,
 				B290A37726442F7300ABECDC /* ViewController.swift in Sources */,
 				B290A3B62644392F00ABECDC /* Usuario.swift in Sources */,

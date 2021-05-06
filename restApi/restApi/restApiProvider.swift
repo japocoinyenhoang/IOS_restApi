@@ -26,7 +26,7 @@ final class restApiProvider {
         let url = "\(baseURL)users/\(id)"
         //AF hace referencia a la libreria Alamofire
         //llamada basica get, y que la llamada devuelva un valor (codigo del 200 al 299 que he sacado como constante estadoOK
-        AF.request(url, method: .get).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self) {
+        AF.request(url, method: .get).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) {
             response in
             //comprobar si el usuario existe
             if let usuario = response.value?.data {
