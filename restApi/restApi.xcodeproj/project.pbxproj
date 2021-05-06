@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		B290A38226442F7300ABECDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B290A38026442F7300ABECDC /* LaunchScreen.storyboard */; };
 		B290A38D26442F7400ABECDC /* restApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A38C26442F7400ABECDC /* restApiTests.swift */; };
 		B290A39826442F7400ABECDC /* restApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A39726442F7400ABECDC /* restApiUITests.swift */; };
+		B290A3AA2644312100ABECDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B290A3A92644312100ABECDC /* Alamofire */; };
+		B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3AE264431D100ABECDC /* restApiProvider.swift */; };
+		B290A3B62644392F00ABECDC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3B52644392F00ABECDC /* Usuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		B290A39326442F7400ABECDC /* restApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = restApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B290A39726442F7400ABECDC /* restApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApiUITests.swift; sourceTree = "<group>"; };
 		B290A39926442F7400ABECDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B290A3AE264431D100ABECDC /* restApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApiProvider.swift; sourceTree = "<group>"; };
+		B290A3B52644392F00ABECDC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B290A3AA2644312100ABECDC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,7 @@
 		B290A37126442F7300ABECDC /* restApi */ = {
 			isa = PBXGroup;
 			children = (
+				B290A3B3264438F800ABECDC /* api */,
 				B290A37226442F7300ABECDC /* AppDelegate.swift */,
 				B290A37426442F7300ABECDC /* SceneDelegate.swift */,
 				B290A37626442F7300ABECDC /* ViewController.swift */,
@@ -109,6 +116,7 @@
 				B290A38026442F7300ABECDC /* LaunchScreen.storyboard */,
 				B290A38326442F7300ABECDC /* Info.plist */,
 				B290A37B26442F7300ABECDC /* restApi.xcdatamodeld */,
+				B290A3AE264431D100ABECDC /* restApiProvider.swift */,
 			);
 			path = restApi;
 			sourceTree = "<group>";
@@ -131,6 +139,22 @@
 			path = restApiUITests;
 			sourceTree = "<group>";
 		};
+		B290A3B3264438F800ABECDC /* api */ = {
+			isa = PBXGroup;
+			children = (
+				B290A3B42644390D00ABECDC /* Data */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		B290A3B42644390D00ABECDC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B290A3B52644392F00ABECDC /* Usuario.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +171,9 @@
 			dependencies = (
 			);
 			name = restApi;
+			packageProductDependencies = (
+				B290A3A92644312100ABECDC /* Alamofire */,
+			);
 			productName = restApi;
 			productReference = B290A36F26442F7300ABECDC /* restApi.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +245,9 @@
 				Base,
 			);
 			mainGroup = B290A36626442F7300ABECDC;
+			packageReferences = (
+				B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B290A37026442F7300ABECDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +293,8 @@
 			files = (
 				B290A37D26442F7300ABECDC /* restApi.xcdatamodeld in Sources */,
 				B290A37726442F7300ABECDC /* ViewController.swift in Sources */,
+				B290A3B62644392F00ABECDC /* Usuario.swift in Sources */,
+				B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */,
 				B290A37326442F7300ABECDC /* AppDelegate.swift in Sources */,
 				B290A37526442F7300ABECDC /* SceneDelegate.swift in Sources */,
 			);
@@ -591,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B290A3A92644312100ABECDC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B290A37B26442F7300ABECDC /* restApi.xcdatamodeld */ = {

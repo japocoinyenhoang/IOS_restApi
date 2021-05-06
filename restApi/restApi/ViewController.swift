@@ -12,8 +12,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // LLAMO A MI PROVIDER
+        //restApiProvider.shared.self
     }
 
-
+   
+    @IBAction func getUsuarioAction(_ sender: Any) {
+        restApiProvider.shared.getUsuario(id:14)
+    }
 }
+   
+
 
