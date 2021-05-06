@@ -22,7 +22,7 @@ final class restApiProvider {
     //añado las peticiones
     //GET de un usuario
     // el _ es para pasarle el dato de forma oculta
-    func getUsuario(id: Int, success: @escaping (_ usuario: Usuario) ->(), faillure: @escaping (_ error: Error?) ->()) {
+    func getUsuario(id: Int, success: @escaping (_ usuario: Usuario) ->(), failure: @escaping (_ error: Error?) ->()) {
         
         // preparacion de la url para coger el usuario
         let url = "\(baseURL)users/\(id)"
@@ -40,7 +40,8 @@ final class restApiProvider {
                 print(usuario.email!)*/
             }else {
                 // no tenemos datos del usuario
-                print("usuario no encontrado")
+                failure(response.error)
+                
             }
         }
     }

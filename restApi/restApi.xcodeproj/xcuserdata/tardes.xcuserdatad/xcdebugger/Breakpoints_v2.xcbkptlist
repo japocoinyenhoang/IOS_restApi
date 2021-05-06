@@ -20,5 +20,69 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53F66ADC-2126-495B-A9E5-083EADA484FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restApi/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getUsuarioAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DCABBE1-E072-4399-99F2-8FA0F97E04D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "restApi/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getUsuarioAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2DCABBE1-E072-4399-99F2-8FA0F97E04D2 - 2bebc15d99b18cc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (restApi.Usuario) -&gt; () in restApi.ViewController.getUsuarioAction(Any) -&gt; ()"
+                  moduleName = "restApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tardes/Desktop/IOS_restApi/restApi/restApi/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "995">
+               </Location>
+               <Location
+                  uuid = "2DCABBE1-E072-4399-99F2-8FA0F97E04D2 - 4fff55fcac9f51df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in restApi.ViewController.getUsuarioAction(Any) -&gt; ()"
+                  moduleName = "restApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tardes/Desktop/IOS_restApi/restApi/restApi/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

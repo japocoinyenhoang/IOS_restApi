@@ -30,6 +30,7 @@ class ViewController: UIViewController {
    
     @IBAction func getUsuarioAction(_ sender: Any) {
         ActivityIndicator.startAnimating()
+        
         restApiProvider.shared.getUsuario(id: 55) { (usuario)  in
             // si la peticióm del usuario con id es correcto
             self.ActivityIndicator.stopAnimating()
@@ -37,15 +38,13 @@ class ViewController: UIViewController {
             self.txtUsuario.text = usuario.nombre
             self.txtEmail.text = usuario.email
             
-        } faillure: { (error) -> () in
+        } failure: { (error) -> () in
             // Si la peticion no es correcta
             self.ActivityIndicator.stopAnimating()
         }
 
-          
-            
-        }
     }
+}
 
    
 
