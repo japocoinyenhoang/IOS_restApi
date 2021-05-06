@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsuario: UILabel!
     @IBOutlet weak var txtEmail: UILabel!
     
+    @IBOutlet weak var textId: UILabel!
+    
     @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -43,6 +45,25 @@ class ViewController: UIViewController {
             self.ActivityIndicator.stopAnimating()
         }
 
+    }
+    
+    @IBAction func postAction(_ sender: Any) {
+        ActivityIndicator.startAnimating()
+        
+        let newUsuario = NuevoUsuario(name: "Yen", email: "esteesmimail@gmail.com", gender: "female", status: "Active")
+        
+        restApiProvider.shared.postUsuario(usuario: NuevoUsuario) { (usuario)  in
+            // si la peticióm del usuario con id es correcto
+            self.ActivityIndicator.stopAnimating()
+
+            self.txtUsuario.text = usuario.nombre
+            self.txtEmail.text = usuario.email
+            self.textId.text = usuario.id?.description
+            
+        } failure: { (error) -> () in
+            // Si la peticion no es correcta
+            self.ActivityIndicator.stopAnimating()
+        }
     }
 }
 

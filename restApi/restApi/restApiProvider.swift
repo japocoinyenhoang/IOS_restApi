@@ -3,6 +3,7 @@
 //  restApi
 //
 //  Created by Tardes on 6/5/21.
+//  https://gorest.co.in/
 //
 
 import Foundation  // libreria que lleva lo principal de ios
@@ -18,10 +19,13 @@ final class restApiProvider {
     private let baseURL =
        "https://gorest.co.in/public-api/"
     private let estadoOk = 200...299
+    private let TOKEN = "4f0b15144cb50d49fbea658f040cc89fd1896c3040d1c6b8a1bfd7b67c89941a"
     
     //añado las peticiones
     //GET de un usuario
     // el _ es para pasarle el dato de forma oculta
+    
+    //GET de un usuario
     func getUsuario(id: Int, success: @escaping (_ usuario: Usuario) ->(), failure: @escaping (_ error: Error?) ->()) {
         
         // preparacion de la url para coger el usuario
@@ -44,5 +48,32 @@ final class restApiProvider {
                 
             }
         }
+    }
+    
+    
+    // POST Añadir un usuario
+    func postUsuario(usuario: NuevoUsuario, success: @escaping (_ usuario: Usuario) ->(), failure: @escaping (_ error: Error?) ->()) {
+        
+        // preparacion de la url para añadir un usuario
+        let url = "\(baseURL)users"
+        
+        //AF hace referencia a la libreria Alamofire
+        //llamada basica post, y que la llamada devuelva un valor (codigo del 200 al 299 que he sacado como constante estadoOK
+        AF.request(url, method: .post, parameters: usuario).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) {
+            response in
+            //comprobar si el usuario existe
+            if let usuario = response.value?.data {
+                success(usuario)
+                // si tenemos datos del usuario
+                /*print(usuario)
+                print(usuario.nombre!)
+                print(usuario.email!)*/
+            }else {
+                // no tenemos datos del usuario
+                failure(response.error)
+                
+            }
+        }
+        
     }
 }

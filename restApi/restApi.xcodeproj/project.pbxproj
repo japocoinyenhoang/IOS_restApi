@@ -20,6 +20,7 @@
 		B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3AE264431D100ABECDC /* restApiProvider.swift */; };
 		B290A3B62644392F00ABECDC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3B52644392F00ABECDC /* Usuario.swift */; };
 		B290A3BC2644440700ABECDC /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3BB2644440700ABECDC /* DateDecoder.swift */; };
+		B290A3C1264464AB00ABECDC /* NuevoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		B290A3AE264431D100ABECDC /* restApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApiProvider.swift; sourceTree = "<group>"; };
 		B290A3B52644392F00ABECDC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		B290A3BB2644440700ABECDC /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoUsuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B290A3B52644392F00ABECDC /* Usuario.swift */,
+				B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				B290A3BC2644440700ABECDC /* DateDecoder.swift in Sources */,
 				B290A37D26442F7300ABECDC /* restApi.xcdatamodeld in Sources */,
+				B290A3C1264464AB00ABECDC /* NuevoUsuario.swift in Sources */,
 				B290A37726442F7300ABECDC /* ViewController.swift in Sources */,
 				B290A3B62644392F00ABECDC /* Usuario.swift in Sources */,
 				B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */,
