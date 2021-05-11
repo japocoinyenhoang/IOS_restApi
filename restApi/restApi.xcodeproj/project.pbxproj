@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22C9549264AC5F9001444E8 /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C9548264AC5F9001444E8 /* post.swift */; };
+		B22C954F264ACFC5001444E8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B22C954E264ACFC5001444E8 /* Kingfisher */; };
 		B290A37326442F7300ABECDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A37226442F7300ABECDC /* AppDelegate.swift */; };
 		B290A37526442F7300ABECDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A37426442F7300ABECDC /* SceneDelegate.swift */; };
 		B290A37726442F7300ABECDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A37626442F7300ABECDC /* ViewController.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B22C9548264AC5F9001444E8 /* post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
 		B290A36F26442F7300ABECDC /* restApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B290A37226442F7300ABECDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B290A37426442F7300ABECDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22C954F264ACFC5001444E8 /* Kingfisher in Frameworks */,
 				B290A3AA2644312100ABECDC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +159,7 @@
 		B290A3B42644390D00ABECDC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B22C9548264AC5F9001444E8 /* post.swift */,
 				B290A3B52644392F00ABECDC /* Usuario.swift */,
 				B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */,
 			);
@@ -187,6 +192,7 @@
 			name = restApi;
 			packageProductDependencies = (
 				B290A3A92644312100ABECDC /* Alamofire */,
+				B22C954E264ACFC5001444E8 /* Kingfisher */,
 			);
 			productName = restApi;
 			productReference = B290A36F26442F7300ABECDC /* restApi.app */;
@@ -261,6 +267,7 @@
 			mainGroup = B290A36626442F7300ABECDC;
 			packageReferences = (
 				B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B22C954D264ACFC5001444E8 /* XCRemoteSwiftPackageReference "kingfisher" */,
 			);
 			productRefGroup = B290A37026442F7300ABECDC /* Products */;
 			projectDirPath = "";
@@ -311,6 +318,7 @@
 				B290A37726442F7300ABECDC /* ViewController.swift in Sources */,
 				B290A3B62644392F00ABECDC /* Usuario.swift in Sources */,
 				B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */,
+				B22C9549264AC5F9001444E8 /* post.swift in Sources */,
 				B290A37326442F7300ABECDC /* AppDelegate.swift in Sources */,
 				B290A37526442F7300ABECDC /* SceneDelegate.swift in Sources */,
 			);
@@ -641,6 +649,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B22C954D264ACFC5001444E8 /* XCRemoteSwiftPackageReference "kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 		B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -652,6 +668,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B22C954E264ACFC5001444E8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B22C954D264ACFC5001444E8 /* XCRemoteSwiftPackageReference "kingfisher" */;
+			productName = Kingfisher;
+		};
 		B290A3A92644312100ABECDC /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B290A3A82644312100ABECDC /* XCRemoteSwiftPackageReference "Alamofire" */;

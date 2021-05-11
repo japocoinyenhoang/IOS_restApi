@@ -57,6 +57,9 @@ final class restApiProvider {
         // preparacion de la url para añadir un usuario
         let url = "\(baseURL)users"
         
+        //preparación cabecera con token
+        let headers: HTTPHeaders = [.authorization(bearerToken: TOKEN)]
+        
         //AF hace referencia a la libreria Alamofire
         //llamada basica post, y que la llamada devuelva un valor (codigo del 200 al 299 que he sacado como constante estadoOK
         AF.request(url, method: .post, parameters: usuario).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) {
@@ -76,4 +79,96 @@ final class restApiProvider {
         }
         
     }
+    
+    //PUT PACH Modificar un usuario
+    func putupdateUsuario(id: Int, usuario: NuevoUsuario,success: @escaping (_ usuario: Usuario) -> (), failure: @escaping (_ error: Error?) -> ()) {
+    
+        let url = "\(baseURL)users/\(id)"
+        
+        //preparación cabecera con token
+        let headers: HTTPHeaders = [.authorization(bearerToken: TOKEN)]
+        
+        //lamada basica post
+        AF.request(url,
+                   method: .put,
+                   parameters: usuario,
+                   encoder: JSONParameterEncoder.default,
+                   headers: headers
+                   ).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) { response in
+            
+            //comprobar si el usuario existe
+            if let usuario = response.value?.data {
+                //si tenemos datos del usuario
+                
+                success(usuario)
+                
+                
+            } else {
+                //no tenemos datos del usuario
+                failure(response.error)
+            }
+            
+        }
+        
+    
+    }
+    
+    //DELETE borrar un usuario
+    func deleteUsuario(id: Int,success: @escaping () -> (), failure: @escaping (_ error: Error?) -> ()) {
+    
+        let url = "\(baseURL)users/\(id)"
+        
+        //preparación cabecera con token
+        let headers: HTTPHeaders = [.authorization(bearerToken: TOKEN)]
+        
+        //lamada basica post
+        AF.request(url,
+                   method: .delete,
+                   headers: headers
+                   ).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self) { response in
+            
+            //comprobar si el usuario existe
+             if let error = response.error {
+                //en caso error al borrar
+                
+                failure(error)
+
+            } else {
+                //en caso de que si borre
+                success()
+            }
+        }
+
+    }
+    
+    //GET de POST
+   /* func getPosts(success: @escaping (_ posts: [Post]) -> (), failure: @escaping (_ error: Error?) -> ()) {
+    
+        let url = "\(baseURL)users/\(id)"
+        
+        //preparación cabecera con token
+        let headers: HTTPHeaders = [.authorization(bearerToken: TOKEN)]
+        
+        //lamada basica post
+        AF.request(url,
+                   method: .delete,
+                   headers: headers
+                   ).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self) { response in
+            
+            //comprobar si el usuario existe
+             if let error = response.error {
+                //en caso error al borrar
+                
+                failure(error)
+
+            } else {
+                //en caso de que si borre
+                success()
+            }
+            
+        }
+        
+    
+    }*/
+    
 }
