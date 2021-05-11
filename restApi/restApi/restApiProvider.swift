@@ -62,8 +62,12 @@ final class restApiProvider {
         
         //AF hace referencia a la libreria Alamofire
         //llamada basica post, y que la llamada devuelva un valor (codigo del 200 al 299 que he sacado como constante estadoOK
-        AF.request(url, method: .post, parameters: usuario).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) {
-            response in
+        AF.request(url,
+                   method: .post,
+                   parameters: usuario,
+                    encoder: JSONParameterEncoder.default,
+                    headers: headers
+                    ).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self, decoder: DateDecoder()) { response in
             //comprobar si el usuario existe
             if let usuario = response.value?.data {
                 success(usuario)
@@ -74,10 +78,8 @@ final class restApiProvider {
             }else {
                 // no tenemos datos del usuario
                 failure(response.error)
-                
             }
         }
-        
     }
     
     //PUT PACH Modificar un usuario
@@ -99,18 +101,13 @@ final class restApiProvider {
             //comprobar si el usuario existe
             if let usuario = response.value?.data {
                 //si tenemos datos del usuario
-                
                 success(usuario)
-                
                 
             } else {
                 //no tenemos datos del usuario
                 failure(response.error)
             }
-            
         }
-        
-    
     }
     
     //DELETE borrar un usuario
@@ -142,33 +139,23 @@ final class restApiProvider {
     }
     
     //GET de POST
-   /* func getPosts(success: @escaping (_ posts: [Post]) -> (), failure: @escaping (_ error: Error?) -> ()) {
-    
-        let url = "\(baseURL)users/\(id)"
+    func getPosts(success: @escaping (_ posts: [Post]) -> (), failure: @escaping (_ error: Error?) -> ()) {
         
-        //preparación cabecera con token
-        let headers: HTTPHeaders = [.authorization(bearerToken: TOKEN)]
+        let url = "\(baseURL)posts"
         
-        //lamada basica post
-        AF.request(url,
-                   method: .delete,
-                   headers: headers
-                   ).validate(statusCode: estadoOk).responseDecodable(of: usuarioRespuesta.self) { response in
+        //lamada basica get
+        AF.request(url, method: .get).validate(statusCode: estadoOk).responseDecodable(of: postRespuesta.self, decoder: DateDecoder()) { response in
             
             //comprobar si el usuario existe
-             if let error = response.error {
-                //en caso error al borrar
+            if let posts = response.value?.data {
+                //si tenemos datos del usuario
+                success(posts)
                 
-                failure(error)
-
             } else {
-                //en caso de que si borre
-                success()
+                //no tenemos datos del usuario
+                failure(response.error)
             }
-            
         }
-        
-    
-    }*/
+    }
     
 }

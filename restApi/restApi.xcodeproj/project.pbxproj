@@ -23,6 +23,7 @@
 		B290A3B62644392F00ABECDC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3B52644392F00ABECDC /* Usuario.swift */; };
 		B290A3BC2644440700ABECDC /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3BB2644440700ABECDC /* DateDecoder.swift */; };
 		B290A3C1264464AB00ABECDC /* NuevoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */; };
+		B2DBAEF5264AEF440049F585 /* VCPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DBAEF4264AEF440049F585 /* VCPosts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B290A3B52644392F00ABECDC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		B290A3BB2644440700ABECDC /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
 		B290A3C0264464AB00ABECDC /* NuevoUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoUsuario.swift; sourceTree = "<group>"; };
+		B2DBAEF4264AEF440049F585 /* VCPosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCPosts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				B290A37226442F7300ABECDC /* AppDelegate.swift */,
 				B290A37426442F7300ABECDC /* SceneDelegate.swift */,
 				B290A37626442F7300ABECDC /* ViewController.swift */,
+				B2DBAEF4264AEF440049F585 /* VCPosts.swift */,
 				B290A37826442F7300ABECDC /* Main.storyboard */,
 				B290A37E26442F7300ABECDC /* Assets.xcassets */,
 				B290A38026442F7300ABECDC /* LaunchScreen.storyboard */,
@@ -316,6 +319,7 @@
 				B290A37D26442F7300ABECDC /* restApi.xcdatamodeld in Sources */,
 				B290A3C1264464AB00ABECDC /* NuevoUsuario.swift in Sources */,
 				B290A37726442F7300ABECDC /* ViewController.swift in Sources */,
+				B2DBAEF5264AEF440049F585 /* VCPosts.swift in Sources */,
 				B290A3B62644392F00ABECDC /* Usuario.swift in Sources */,
 				B290A3AF264431D100ABECDC /* restApiProvider.swift in Sources */,
 				B22C9549264AC5F9001444E8 /* post.swift in Sources */,
